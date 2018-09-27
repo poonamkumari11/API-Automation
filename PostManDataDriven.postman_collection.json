@@ -1,0 +1,72 @@
+{
+	"variables": [],
+	"info": {
+		"name": "PostManDataDriven",
+		"_postman_id": "31675a4a-0acc-a14b-89ee-2c155dd4b8b1",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "EchoUsername",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body has username\"] = responseBody.has(\"Amit\");",
+							"tests[\"Body has password\"] = responseBody.has(\"AmitPwd\");"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"console.log(\"Username that will be sent : \") + data.username",
+							"console.log(\"Password that will be send : \") + data['password']"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": {
+					"raw": "https://postman-echo.com/get?username=\"Amit\"&password=\"AmitPwd\"",
+					"protocol": "https",
+					"host": [
+						"postman-echo",
+						"com"
+					],
+					"path": [
+						"get"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "\"Amit\"",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "password",
+							"value": "\"AmitPwd\"",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": null
+			},
+			"response": []
+		}
+	]
+}
