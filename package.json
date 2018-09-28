@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "newman-reporter-html": "^1.0.2"
+    "newman": "^3.8.3"
+	"newman-reporter-html": "^1.0.2"
   },
   "devDependencies": {},
   "scripts": {
