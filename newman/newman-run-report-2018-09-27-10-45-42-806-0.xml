@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="PostManDataDriven" tests="1" time="1.169">
+  <testsuite name="EchoUsername" id="fd5728d6-ff6b-4d26-98ae-94c6f7bf1fe0" tests="2" failures="0" errors="0" time="1.169">
+    <testcase name="Body has username" time="1.169"/>
+    <testcase name="Body has password" time="1.169"/>
+  </testsuite>
+</testsuites>
